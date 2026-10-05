@@ -1,0 +1,41 @@
+:root {
+  --paper: #f4eee2;
+  --sheet: #fffaf0;
+  --ink: #1d2238;
+  --muted: #69666f;
+  --rule: #e3d9c4;
+  --ribbon: #d9553b;
+  --gold: #f1b24a;
+  --earned: #2f6b52;
+  --warn: #a8581a;
+  --display: 'Young Serif', Georgia, serif;
+  --sans: 'Instrument Sans', system-ui, sans-serif;
+  --mono: 'Spline Sans Mono', ui-monospace, monospace;
+  color: var(--ink);
+  background: var(--paper);
+  font-family: var(--sans);
+  font-size: 16px;
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at 12% -10%, rgba(241, 178, 74, 0.18), transparent 38%),
+    repeating-linear-gradient(to bottom, transparent 0 31px, rgba(29, 34, 56, 0.035) 31px 32px),
+    var(--paper);
+}
+
+a { color: inherit; }
+button, input { font: inherit; color: inherit; }
+button { cursor: pointer; }
+button:disabled { cursor: not-allowed; opacity: 0.55; }
+:focus-visible { outline: 2px solid var(--ribbon); outline-offset: 3px; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+}
