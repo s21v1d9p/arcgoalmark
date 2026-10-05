@@ -1,5 +1,5 @@
 import type { Vault } from '../lib/vaults'
-import { percent } from './format'
+import { percent, shortAddress } from './format'
 
 function compact(value: number): string {
   return new Intl.NumberFormat('en-US', { notation: 'compact', maximumFractionDigits: 1 }).format(value)
@@ -38,6 +38,7 @@ export function VaultTable({ vaults, error }: { vaults: Vault[] | null; error: s
                   <td>
                     <strong>{vault.name}</strong>
                     <span className="curator">{vault.curator ?? 'Curator not listed'}</span>
+                    <span className="curator mono">{shortAddress(vault.address)}</span>
                   </td>
                   <td>{vault.asset}</td>
                   <td className="figure">{percent(vault.apy)}</td>

@@ -88,6 +88,7 @@ input:focus { border-color: var(--ink); }
 .vault-table td { padding: 13px 12px; border-bottom: 1px solid var(--rule); vertical-align: top; }
 .vault-table td strong { display: block; font-weight: 600; }
 .curator { display: block; font-size: 12.5px; color: var(--muted); }
+.curator.mono { font-family: var(--mono); font-size: 11.5px; }
 .figure { font-family: var(--mono); white-space: nowrap; }
 .chips { display: flex; flex-wrap: wrap; gap: 6px; }
 .chip { padding: 2px 9px; border: 1px solid var(--earned); border-radius: 999px; font-size: 12px; color: var(--earned); white-space: nowrap; }

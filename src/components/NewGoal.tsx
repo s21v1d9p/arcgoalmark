@@ -3,7 +3,7 @@ import type { Address } from 'viem'
 import { deadlineFromDate, parseAmount } from '../lib/amounts'
 import { newGoalCalls } from '../lib/goals'
 import type { Vault } from '../lib/vaults'
-import { percent, ReviewNote, SendingNote } from './format'
+import { percent, ReviewNote, SendingNote, shortAddress } from './format'
 import { useTransaction } from './useTransaction'
 import type { Plan } from './useTransaction'
 
@@ -116,7 +116,7 @@ export function NewGoal({ account, book, vaults, usedVaults, onCreated }: Props)
             <span className="choice-name">{choice.name}</span>
             <span className="choice-meta">
               {choice.asset} · {percent(choice.apy)} now · {choice.curator ?? 'curator not listed'}
-              {choice.status === 'low_liquidity' ? ' · low liquidity' : ''}
+              {choice.status === 'low_liquidity' ? ' · low liquidity' : ''} · {shortAddress(choice.address)}
             </span>
           </label>
         ))}
