@@ -16,15 +16,19 @@ I built it for people and small teams who set money aside for something specific
 
 The source is verified on Arc Explorer, and the deployed runtime bytecode is identical to the tested build. Deploying it cost about 0.02 USDC.
 
-The first goal was made through the live app, one Arc transaction per step:
+These goals were made through the live app, one Arc transaction per step:
 
 | Step | Transaction | Gas |
 | --- | --- | --- |
 | Create the goal "Rent buffer" (target 5 USDC) | [0x8648...3d97](https://explorer.arc.io/tx/0x8648e29ca976a916c8dfa5a1194673c8fc2f9469c46dc3d23b3ab2cd4de43d97) | 0.0035 USDC |
 | Add 1 USDC: approve, deposit into the vault and record it | [0xa59a...5816](https://explorer.arc.io/tx/0xa59a6667ac3c83cbb4439d7825511f46a8330b5cce4654a7f812083c9f9d5816) | 0.0066 USDC |
 | Pay 0.5 USDC from the goal straight to another wallet | [0x6a0b...bfd6](https://explorer.arc.io/tx/0x6a0bd1c663171a351fa74ca8b10372ba94d66e7568ec8acaf0a8b56686bcbfd6) | 0.0032 USDC |
+| Create the goal "New laptop" (target 10 USDC by Dec 31, 2026) with a first deposit of 1 USDC: create, approve, deposit and record | [0x4f7f...6ed6](https://explorer.arc.io/tx/0x4f7ff10e368b031010af6ec813411d5c7b6b7b702204e06e59ca457980de6ed6) | 0.0090 USDC |
 
-Its share link reads the goal from Arc: https://arcgoalmark.vercel.app/?owner=0x292A2d9C3692E96d0255A353b5e22A38b297d785&vault=0xbeef0007d5A04246F5382957035Df34f7e82102e
+Their share links read each goal from Arc:
+
+- Rent buffer: https://arcgoalmark.vercel.app/?owner=0x292A2d9C3692E96d0255A353b5e22A38b297d785&vault=0xbeef0007d5A04246F5382957035Df34f7e82102e
+- New laptop: https://arcgoalmark.vercel.app/?owner=0x292A2d9C3692E96d0255A353b5e22A38b297d785&vault=0xbeef0016cb2Fd5C352ea7CA08a9f54739DFa7298
 
 ## Why Arc
 
