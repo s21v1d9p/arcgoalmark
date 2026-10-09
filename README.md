@@ -6,6 +6,16 @@ Arc Goalmark is a small web app for saving toward goals in USDC or EURC on Arc. 
 
 I built it for people and small teams who set money aside for something specific, like a rent buffer or a trip, and want it to earn a little while it waits.
 
+- Live app: https://arcgoalmark.vercel.app
+
+## Deployments
+
+| Network | GoalBook | Deployment |
+| --- | --- | --- |
+| Arc mainnet (5042) | [0x9c93...E5F7](https://explorer.arc.io/address/0x9c93345f84f263F44704d5cB92eaEE35927CE5F7) | [0x899f...2502](https://explorer.arc.io/tx/0x899f1200633d0396fb4fd4128a9702835ca78f5512eb040b8db8ddd181a22502) |
+
+The source is verified on Arc Explorer, and the deployed runtime bytecode is identical to the tested build. Deploying it cost about 0.02 USDC.
+
 ## Why Arc
 
 - USDC is Arc's gas token, so a USDC saver only needs USDC.
