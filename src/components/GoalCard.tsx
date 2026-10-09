@@ -151,6 +151,9 @@ export function GoalCard({ goal, vault, account, book, shared = false, onChanged
               <button type="button" onClick={() => open('remove')} aria-pressed={mode === 'remove'} disabled={tx.busy}>Remove goal</button>
             )}
           </div>
+          {goal.shares === 0n && !mode && (
+            <p className="muted">Add money to this goal before you take money out or pay someone from it.</p>
+          )}
           {mode && (
             <div className="goal-tray">
               {mode === 'pay' && (

@@ -138,6 +138,17 @@ describe('Arc Goalmark', () => {
     await waitFor(() => expect(screen.getByRole('status').textContent).toMatch(/paid 0.50 USDC/i))
   })
 
+  it('explains why an empty goal cannot be paid from yet', async () => {
+    connected([[{ ...rent, shares: 0n, value: 0n, deposited: 0n }]])
+    const user = userEvent.setup()
+    render(<App />)
+
+    await user.click(screen.getByRole('button', { name: /connect wallet/i }))
+    const card = (await screen.findByRole('heading', { name: 'Rent buffer' })).closest('article') as HTMLElement
+    expect(within(card).getByRole('button', { name: /pay from goal/i }).hasAttribute('disabled')).toBe(true)
+    expect(within(card).getByText(/add money to this goal before/i)).toBeTruthy()
+  })
+
   it('shows a shared goal read-only from the chain', async () => {
     window.history.replaceState(null, '', `/?owner=${owner}&vault=${steakhouse.address}`)
     vi.spyOn(goals, 'loadGoal').mockResolvedValue(rent)
