@@ -7,6 +7,7 @@ Arc Goalmark is a small web app for saving toward goals in USDC or EURC on Arc. 
 I built it for people and small teams who set money aside for something specific, like a rent buffer or a trip, and want it to earn a little while it waits.
 
 - Live app: https://arcgoalmark.vercel.app
+- Demo video (1 min 41 s, captioned, no sound): https://arcgoalmark.vercel.app/demo.mp4
 
 ## Deployments
 
